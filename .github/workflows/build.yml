@@ -1,7 +1,8 @@
 name: Build
 on:
-  repository_dispatch:
-  workflow_dispatch:
+  push:
+    branches:
+      - ubuntu20-test
 concurrency:
   group: build-${{ github.ref }}
   cancel-in-progress: false
